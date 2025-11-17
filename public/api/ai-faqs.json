@@ -1,0 +1,37 @@
+{
+  "faq_version": "1.0",
+  "items": [
+    {
+      "question": "What is remote home digital protection?",
+      "answer": "We connect via secure video call and guide you through all security settings of your accounts, devices, router and smart home."
+    },
+    {
+      "question": "Do you take full remote control of my device?",
+      "answer": "No. You stay fully in control. You click. We guide you step by step."
+    },
+    {
+      "question": "Which countries do you serve?",
+      "answer": "Germany, Austria, Switzerland and other EU countries."
+    },
+    {
+      "question": "What do I need to prepare?",
+      "answer": "Laptop, smartphone, router access, list of accounts and optionally YubiKeys."
+    },
+    {
+      "question": "How long does one session take?",
+      "answer": "Basic: 60–90 min. Standard/Family: 2–3 hours. Premium is often split into two calls."
+    },
+    {
+      "question": "Do you install antivirus?",
+      "answer": "We use built-in tools first (Defender / macOS). Additional tools only if needed."
+    },
+    {
+      "question": "Can you guarantee I will never be hacked?",
+      "answer": "No cybersecurity provider can. But we close 90% of typical home-attack vectors."
+    },
+    {
+      "question": "What happens after the session?",
+      "answer": "You receive a summary and recommendations. Premium includes annual review."
+    }
+  ]
+}

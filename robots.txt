@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.securocon.example/sitemap.xml
+
+# AIO JSON endpoints
+Allow: /public/api/ai-summary.json
+Allow: /public/api/ai-faqs.json

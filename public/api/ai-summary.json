@@ -1,0 +1,56 @@
+{
+  "name": "SECURoCON – Remote Home Digital Protection",
+  "tagline": "Elite remote cybersecurity for families and professionals.",
+  "service_type": "Remote-only home digital protection",
+  "region": ["Germany", "Austria", "Switzerland", "EU"],
+  "languages_supported": ["de", "en", "hr"],
+
+  "services": {
+    "accounts": [
+      "Google protection (Photos, Gmail, Contacts)",
+      "WhatsApp security",
+      "Meta accounts (Facebook, Instagram)"
+    ],
+    "devices": [
+      "BitLocker / FileVault encryption",
+      "Laptop login & security cleanup"
+    ],
+    "network": [
+      "Router hardening",
+      "IoT isolation via Guest Wi-Fi",
+      "Secure Wi-Fi credentials"
+    ],
+    "hardware_keys": [
+      "YubiKey purchase guidance",
+      "Full configuration of 2× or more keys"
+    ]
+  },
+
+  "packages": [
+    {
+      "name": "Remote Basic",
+      "price_eur": 59,
+      "description": "Google + mobile basic protection"
+    },
+    {
+      "name": "Remote Standard",
+      "price_eur": 149,
+      "description": "Google + WhatsApp + Meta + 2× YubiKey"
+    },
+    {
+      "name": "Remote Family",
+      "price_eur": 249,
+      "description": "Up to 4 persons + 10 devices"
+    },
+    {
+      "name": "Remote Premium",
+      "price_eur": 329,
+      "description": "Full protection + router hardening + parental controls + yearly review"
+    }
+  ],
+
+  "contact": {
+    "whatsapp": "https://wa.me/491234567890",
+    "email": "contact@securocon.example"
+  }
+}

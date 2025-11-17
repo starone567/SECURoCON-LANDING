@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <script>
+    document.documentElement.setAttribute("data-theme", "dark");
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SECURoCON – Remote Home Digital Protection</title>
+  <meta
+    name="description"
+    content="SECURoCON provides remote-only home digital protection for families and professionals – securing accounts, devices, routers and smart homes across the EU."
+  />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- AIO JSON endpoints -->
+  <link
+    rel="alternate"
+    type="application/json"
+    href="/public/api/ai-summary.json"
+    title="SECURoCON AI Summary"
+  />
+  <link
+    rel="alternate"
+    type="application/json"
+    href="/public/api/ai-faqs.json"
+    title="SECURoCON AI FAQs"
+  />
+
+  <!-- JSON-LD AIO metadata -->
+  <script type="application/ld+json" id="jsonld-service">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SECURoCON – Remote Home Digital Protection",
+    "description": "Remote-only cybersecurity service protecting Google, WhatsApp, Meta, laptops, routers and smart homes across the EU.",
+    "serviceType": "Remote cybersecurity & home digital protection",
+    "brand": {
+      "@type": "Brand",
+      "name": "SECURoCON"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "SECURoCON",
+      "url": "https://www.securocon.example",
+      "logo": "https://www.securocon.example/logo.png"
+    },
+    "areaServed": [
+      "Germany",
+      "Austria",
+      "Switzerland",
+      "EU"
+    ],
+    "availableLanguage": [
+      "de",
+      "en",
+      "hr"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Remote Basic",
+        "price": "59.00",
+        "priceCurrency": "EUR",
+        "description": "Google + mobile basic protection (no hardware keys included)."
+      },
+      {
+        "@type": "Offer",
+        "name": "Remote Standard",
+        "price": "149.00",
+        "priceCurrency": "EUR",
+        "description": "Google + WhatsApp + Meta. YubiKey setup if the client already owns the keys."
+      },
+      {
+        "@type": "Offer",
+        "name": "Remote Family",
+        "price": "249.00",
+        "priceCurrency": "EUR",
+        "description": "Up to 4 persons + 10 devices. Includes YubiKey setup if keys are available."
+      },
+      {
+        "@type": "Offer",
+        "name": "Remote Premium",
+        "price": "329.00",
+        "priceCurrency": "EUR",
+        "description": "Everything + router hardening + parental controls + yearly review. Full YubiKey rollout if keys are available."
+      }
+    ],
+    "isSimilarTo": "https://www.securocon.example",
+    "keywords": [
+      "remote cybersecurity",
+      "home digital protection",
+      "google account security",
+      "whatsapp security",
+      "router hardening",
+      "iot security",
+      "yubikey setup",
+      "family protection"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div class="page-root">
+    <!-- =======================
+         NAVBAR
+    ======================== -->
+    <header class="sc-header">
+      <div class="sc-container sc-header-inner">
+        <div class="sc-logo-wrap">
+          <div class="sc-logo-mark">S</div>
+          <div class="sc-logo-text">
+            <span class="sc-logo-title">SECURoCON</span>
+            <span class="sc-logo-subtitle" data-i18n="brand.subtitle">
+              Remote Home Digital Protection
+            </span>
+          </div>
+        </div>
+
+        <nav class="sc-nav">
+          <button class="sc-nav-link" data-scroll-target="hero" data-i18n="nav.home">
+            Home
+          </button>
+          <button class="sc-nav-link" data-scroll-target="services" data-i18n="nav.services">
+            Services
+          </button>
+          <button class="sc-nav-link" data-scroll-target="packages" data-i18n="nav.packages">
+            Packages
+          </button>
+          <button class="sc-nav-link" data-scroll-target="faq" data-i18n="nav.faq">
+            FAQ
+          </button>
+          <button class="sc-nav-link" data-scroll-target="contact" data-i18n="nav.contact">
+            Contact
+          </button>
+        </nav>
+
+        <div class="sc-header-controls">
+          <div class="sc-lang-switch">
+            <button class="sc-lang-btn" data-lang="de">DE</button>
+            <button class="sc-lang-btn" data-lang="en">EN</button>
+            <button class="sc-lang-btn is-active" data-lang="hr">HR</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- =======================
+         MAIN
+    ======================== -->
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="sc-section sc-hero">
+        <div class="sc-container sc-hero-inner">
+          <div class="sc-hero-copy">
+            <p class="sc-pill" data-i18n="hero.badge">
+              Remote-only | Secure your digital home
+            </p>
+            <h1 class="sc-hero-title" data-i18n="hero.title">
+              Elite remote protection for your digital home.
+            </h1>
+            <p class="sc-hero-subtitle" data-i18n="hero.subtitle">
+              We secure your accounts, devices, router and smart home – remotely, discreetly and guided step by step.
+            </p>
+
+            <div class="sc-hero-cta-row">
+              <a href="#contact" class="sc-btn sc-btn-primary" data-i18n="hero.primaryCta">
+                Book remote protection
+              </a>
+              <a href="#packages" class="sc-btn sc-btn-ghost" data-i18n="hero.secondaryCta">
+                View packages & pricing
+              </a>
+            </div>
+
+            <div class="sc-hero-trust" data-i18n="hero.trust">
+              Remote-only service for Germany, Austria, Switzerland & EU.
+            </div>
+          </div>
+
+          <div class="sc-hero-panel">
+            <div class="sc-hero-shield">
+              <div class="sc-hero-shield-inner">
+                <span class="sc-hero-shield-icon">🛡️</span>
+                <span class="sc-hero-shield-label" data-i18n="hero.shield">
+                  Live remote protection call
+                </span>
+              </div>
+            </div>
+
+            <ul class="sc-hero-list">
+              <li data-i18n="hero.item1">Secure Google, WhatsApp, Facebook, Instagram.</li>
+              <li data-i18n="hero.item2">Encrypt laptop (BitLocker/FileVault).</li>
+              <li data-i18n="hero.item3">Harden router & isolate IoT devices.</li>
+              <li data-i18n="hero.item4">Set up YubiKey for strong 2FA.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROBLEM -->
+      <section id="services" class="sc-section sc-problem">
+        <div class="sc-container">
+          <div class="sc-section-header">
+            <h2 class="sc-section-title" data-i18n="problem.title">
+              Your home network is more exposed than you think.
+            </h2>
+            <p class="sc-section-subtitle" data-i18n="problem.subtitle">
+              Most households run 6–12 connected devices, weak passwords and unprotected accounts – a perfect target for attackers.
+            </p>
+          </div>
+
+          <div class="sc-grid sc-grid-3">
+            <article class="sc-card" data-i18n-scope="problem.cards.devices">
+              <h3 class="sc-card-title" data-i18n="problem.cards.devices.title">
+                Too many devices, zero overview
+              </h3>
+              <p class="sc-card-body" data-i18n="problem.cards.devices.body">
+                Smartphones, laptops, tablets, smart TVs, consoles and IoT gadgets all sit on the same home Wi-Fi – often without segmentation or monitoring.
+              </p>
+            </article>
+
+            <article class="sc-card" data-i18n-scope="problem.cards.accounts">
+              <h3 class="sc-card-title" data-i18n="problem.cards.accounts.title">
+                Accounts without real protection
+              </h3>
+              <p class="sc-card-body" data-i18n="problem.cards.accounts.body">
+                Google, WhatsApp, Facebook and Instagram logins are reused across services, with weak 2FA or no hardware keys at all.
+              </p>
+            </article>
+
+            <article class="sc-card" data-i18n-scope="problem.cards.router">
+              <h3 class="sc-card-title" data-i18n="problem.cards.router.title">
+                Router & IoT misconfigured
+              </h3>
+              <p class="sc-card-body" data-i18n="problem.cards.router.body">
+                Default router settings, open ports, guest networks off and insecure IoT devices create invisible entry points into your home.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section class="sc-section sc-solution">
+        <div class="sc-container">
+          <div class="sc-section-header">
+            <h2 class="sc-section-title" data-i18n="solution.title">
+              SECURoCON protects your digital life – remotely and systematically.
+            </h2>
+            <p class="sc-section-subtitle" data-i18n="solution.subtitle">
+              We join a secure remote session, you click, we guide – and together we harden every critical point in your digital home.
+            </p>
+          </div>
+
+          <div class="sc-grid sc-grid-4 sc-solution-grid">
+            <article class="sc-chip-card">
+              <div class="sc-chip-icon">🔐</div>
+              <h3 class="sc-chip-title" data-i18n="solution.items.accounts.title">
+                Account protection
+              </h3>
+              <p class="sc-chip-body" data-i18n="solution.items.accounts.body">
+                Google, Gmail, Photos, Contacts, WhatsApp, Facebook, Instagram – with strong passwords and secure 2FA.
+              </p>
+            </article>
+
+            <article class="sc-chip-card">
+              <div class="sc-chip-icon">💻</div>
+              <h3 class="sc-chip-title" data-i18n="solution.items.laptop.title">
+                Laptop & data safety
+              </h3>
+              <p class="sc-chip-body" data-i18n="solution.items.laptop.body">
+                BitLocker/FileVault encryption, login hardening and basic endpoint hygiene for your primary work & family devices.
+              </p>
+            </article>
+
+            <article class="sc-chip-card">
+              <div class="sc-chip-icon">📡</div>
+              <h3 class="sc-chip-title" data-i18n="solution.items.router.title">
+                Router & Wi-Fi hardening
+              </h3>
+              <p class="sc-chip-body" data-i18n="solution.items.router.body">
+                Secure router setup, guest networks for IoT, safer Wi-Fi keys and reduced attack surface.
+              </p>
+            </article>
+
+            <article class="sc-chip-card">
+              <div class="sc-chip-icon">🧩</div>
+              <h3 class="sc-chip-title" data-i18n="solution.items.family.title">
+                Family & parental controls
+              </h3>
+              <p class="sc-chip-body" data-i18n="solution.items.family.body">
+                Safer accounts and devices for children, basic content controls and clear rules for digital safety at home.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- REMOTE PROCESS -->
+      <section class="sc-section sc-process">
+        <div class="sc-container">
+          <div class="sc-section-header">
+            <h2 class="sc-section-title" data-i18n="process.title">
+              Remote protection in 5 simple steps.
+            </h2>
+            <p class="sc-section-subtitle" data-i18n="process.subtitle">
+              No technician in your living room – everything happens over a secure video call, with you in full control.
+            </p>
+          </div>
+
+          <ol class="sc-process-steps">
+            <li class="sc-process-step">
+              <span class="sc-step-index">1</span>
+              <div>
+                <h3 data-i18n="process.steps.1.title">Book a remote session</h3>
+                <p data-i18n="process.steps.1.body">
+                  You pick a package and time slot. We confirm and send you a secure video call link and preparation checklist.
+                </p>
+              </div>
+            </li>
+
+            <li class="sc-process-step">
+              <span class="sc-step-index">2</span>
+              <div>
+                <h3 data-i18n="process.steps.2.title">Join the live video call</h3>
+                <p data-i18n="process.steps.2.body">
+                  We meet via encrypted video call. You stay on your own devices – we never take full control.
+                </p>
+              </div>
+            </li>
+
+            <li class="sc-process-step">
+              <span class="sc-step-index">3</span>
+              <div>
+                <h3 data-i18n="process.steps.3.title">Click, we guide.</h3>
+                <p data-i18n="process.steps.3.body">
+                  You click through settings while we explain and verify every security change together.
+                </p>
+              </div>
+            </li>
+
+            <li class="sc-process-step">
+              <span class="sc-step-index">4</span>
+              <div>
+                <h3 data-i18n="process.steps.4.title">YubiKey & 2FA rollout</h3>
+                <p data-i18n="process.steps.4.body">
+                  You order YubiKeys online. We configure them for your critical accounts during the session.
+                </p>
+              </div>
+            </li>
+
+            <li class="sc-process-step">
+              <span class="sc-step-index">5</span>
+              <div>
+                <h3 data-i18n="process.steps.5.title">Router & IoT hardening</h3>
+                <p data-i18n="process.steps.5.body">
+                  We secure your router, activate guest networks for IoT devices and verify that your home is significantly harder to attack.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PACKAGES & PRICING -->
+      <section id="packages" class="sc-section sc-packages">
+        <div class="sc-container">
+          <div class="sc-section-header">
+            <h2 class="sc-section-title" data-i18n="packages.title">
+              Packages & pricing
+            </h2>
+
+          <p class="sc-section-subtitle" data-i18n="packages.subtitle">
+            Four transparent remote packages.
+          </p>
+
+          <p class="sc-section-note" data-i18n="packages.note">
+            Hardware keys (e.g. YubiKey 5 NFC) are not included in the package price.
+            You normally order them yourself; on request we can purchase and ship them
+            for you (+60 € per key + shipping).
+          </p>
+
+          </div>
+
+          <div class="sc-grid sc-grid-4 sc-pricing-grid">
+            <!-- Basic -->
+            <article class="sc-pricing-card" data-plan="basic">
+              <div class="sc-pricing-pill" data-i18n="packages.basic.badge">
+                Starter protection
+              </div>
+              <h3 class="sc-pricing-title" data-i18n="packages.basic.name">
+                Remote Basic
+              </h3>
+              <p class="sc-pricing-price" data-i18n="packages.basic.price">
+                59 €
+              </p>
+              <p class="sc-pricing-desc" data-i18n="packages.basic.desc">
+                Google + mobile basic protection (no hardware keys included).
+              </p>
+              <ul class="sc-pricing-list">
+                <li data-i18n="packages.basic.item1">Google account security check.</li>
+                <li data-i18n="packages.basic.item2">Basic 2FA setup on main device.</li>
+                <li data-i18n="packages.basic.item3">Security hygiene checklist.</li>
+              </ul>
+              <a href="#contact" class="sc-btn sc-btn-secondary" data-i18n="packages.cta">
+                Request this package
+              </a>
+            </article>
+
+            <!-- Standard -->
+            <article class="sc-pricing-card" data-plan="standard">
+              <div class="sc-pricing-pill sc-pricing-pill-accent" data-i18n="packages.standard.badge">
+                Most booked
+              </div>
+              <h3 class="sc-pricing-title" data-i18n="packages.standard.name">
+                Remote Standard
+              </h3>
+              <p class="sc-pricing-price" data-i18n="packages.standard.price">
+                149 €
+              </p>
+              <p class="sc-pricing-desc" data-i18n="packages.standard.desc">
+                Google + WhatsApp + Meta. YubiKey setup if you already own the keys.
+              </p>
+              <ul class="sc-pricing-list">
+                <li data-i18n="packages.standard.item1">Full Google account hardening.</li>
+                <li data-i18n="packages.standard.item2">WhatsApp and Meta account protection.</li>
+                <li data-i18n="packages.standard.item3">
+                  YubiKey integration for key accounts (keys provided by client).
+                </li>
+              </ul>
+              <a href="#contact" class="sc-btn sc-btn-primary" data-i18n="packages.cta">
+                Request this package
+              </a>
+            </article>
+
+            <!-- Family -->
+            <article class="sc-pricing-card" data-plan="family">
+              <div class="sc-pricing-pill" data-i18n="packages.family.badge">
+                For families
+              </div>
+              <h3 class="sc-pricing-title" data-i18n="packages.family.name">
+                Remote Family
+              </h3>
+              <p class="sc-pricing-price" data-i18n="packages.family.price">
+                249 €
+              </p>
+              <p class="sc-pricing-desc" data-i18n="packages.family.desc">
+                Up to 4 persons + 10 devices. Includes YubiKey setup if keys are available.
+              </p>
+              <ul class="sc-pricing-list">
+                <li data-i18n="packages.family.item1">Account protection for up to 4 people.</li>
+                <li data-i18n="packages.family.item2">Up to 10 devices covered.</li>
+                <li data-i18n="packages.family.item3">
+                  YubiKey configuration for family accounts (keys provided by client).
+                </li>
+              </ul>
+              <a href="#contact" class="sc-btn sc-btn-secondary" data-i18n="packages.cta">
+                Request this package
+              </a>
+            </article>
+
+            <!-- Premium -->
+            <article class="sc-pricing-card" data-plan="premium">
+              <div class="sc-pricing-pill" data-i18n="packages.premium.badge">
+                Maximum protection
+              </div>
+              <h3 class="sc-pricing-title" data-i18n="packages.premium.name">
+                Remote Premium
+              </h3>
+              <p class="sc-pricing-price" data-i18n="packages.premium.price">
+                329 €
+              </p>
+              <p class="sc-pricing-desc" data-i18n="packages.premium.desc">
+                Everything + router hardening + parental controls + yearly review. Full YubiKey rollout if keys are available.
+              </p>
+              <ul class="sc-pricing-list">
+                <li data-i18n="packages.premium.item1">Full home digital protection.</li>
+                <li data-i18n="packages.premium.item2">Router & IoT segmentation.</li>
+                <li data-i18n="packages.premium.item3">
+                  Yearly remote follow-up review and YubiKey check.
+                </li>
+              </ul>
+              <a href="#contact" class="sc-btn sc-btn-outline" data-i18n="packages.cta">
+                Request this package
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="sc-section sc-faq">
+        <div class="sc-container">
+          <div class="sc-section-header">
+            <h2 class="sc-section-title" data-i18n="faq.title">
+              Frequently asked questions
+            </h2>
+            <p class="sc-section-subtitle" data-i18n="faq.subtitle">
+              Clear answers on how remote protection works, what we do and what stays in your hands.
+            </p>
+          </div>
+
+          <div class="sc-faq-list" id="faqList">
+            <!-- FAQ se puni iz main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="sc-section sc-contact">
+        <div class="sc-container sc-contact-inner">
+          <div class="sc-contact-copy">
+            <h2 class="sc-section-title" data-i18n="contact.title">
+              Ready to secure your digital home?
+            </h2>
+            <p class="sc-section-subtitle" data-i18n="contact.subtitle">
+              Send us a short message with your situation, preferred package and time window. We’ll get back with a proposed slot.
+            </p>
+
+            <ul class="sc-contact-meta">
+              <li data-i18n="contact.region">
+                Remote-only service · Germany · Austria · Switzerland · EU
+              </li>
+            </ul>
+          </div>
+
+          <div class="sc-contact-actions">
+            <a
+              class="sc-btn sc-btn-primary sc-contact-whatsapp"
+              href="https://wa.me/491234567890"
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="contact.whatsapp"
+            >
+              WhatsApp – request remote protection
+            </a>
+            <a
+              class="sc-btn sc-btn-ghost"
+              href="mailto:contact@securocon.example"
+              data-i18n="contact.email"
+            >
+              contact@securocon.example
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="sc-footer">
+      <div class="sc-container sc-footer-inner">
+        <div class="sc-footer-brand">
+          <div class="sc-logo-mark sc-logo-mark-small">S</div>
+          <div>
+            <div class="sc-footer-title">SECURoCON</div>
+            <div class="sc-footer-subtitle" data-i18n="footer.tagline">
+              Remote Home Digital Protection
+            </div>
+          </div>
+        </div>
+
+        <div class="sc-footer-links">
+          <a href="#hero" data-i18n="footer.link.home">Home</a>
+          <a href="#services" data-i18n="footer.link.services">Services</a>
+          <a href="#packages" data-i18n="footer.link.packages">Packages</a>
+          <a href="#faq" data-i18n="footer.link.faq">FAQ</a>
+          <a href="#contact" data-i18n="footer.link.contact">Contact</a>
+        </div>
+
+        <div class="sc-footer-meta">
+          <span data-i18n="footer.copyright">
+            © SECURoCON – Remote Home Digital Protection
+          </span>
+          <span>·</span>
+          <span data-i18n="footer.remoteOnly">Remote-only · No on-site visits</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
