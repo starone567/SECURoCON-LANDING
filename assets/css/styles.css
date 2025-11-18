@@ -161,27 +161,16 @@ button {
 }
 
 .sc-logo-image {
-    height: 42px;
-    width: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(0, 132, 255, 0.45);
-}
-.sc-logo-mark {
-  width: 56px;           /* VEĆI LOGO */
-  height: 56px;
+  height: 60px;          /* ⇦ OVDJE KONTROLIRAŠ VELIČINU LOGA */
+  width: auto;
+  display: block;
   border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* PNG logo u štitu */
-  background: url("/img/logo-securocon.png") no-repeat center / contain;
-
   box-shadow:
     0 0 0 1px rgba(56, 189, 248, 0.45),
     0 0 22px rgba(56, 189, 248, 0.40);
 }
+
+
 
 
 
