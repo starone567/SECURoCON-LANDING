@@ -160,33 +160,15 @@ button {
   gap: 0.75rem;
 }
 
-.sc-logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 14px;
-  background: radial-gradient(circle at 20% 20%, #38bdf8 0, #020617 60%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #f9fafb;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4),
-    0 14px 30px rgba(15, 23, 42, 0.85);
+.sc-logo-image {
+    height: 42px;
+    width: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 132, 255, 0.45);
 }
 
-.sc-logo-mark-small {
-  width: 26px;
-  height: 26px;
-  border-radius: 12px;
-  background: radial-gradient(circle at 20% 20%, #38bdf8 0, #020617 60%);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #f9fafb;
-  font-weight: 700;
-  font-size: 0.85rem;
-}
+
 
 .sc-logo-text {
   display: flex;
