@@ -157,8 +157,7 @@ button {
 .sc-logo-wrap {
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  transform: translateY(1px); /* lagano podigni logo */
+  gap: 1rem;
 }
 
 .sc-logo-image {
@@ -169,17 +168,21 @@ button {
     box-shadow: 0 0 12px rgba(0, 132, 255, 0.45);
 }
 .sc-logo-mark {
-  width: 54px;     /* bilo 42px */
-  height: 54px;
-  border-radius: 12px;
+  width: 56px;           /* VEĆI LOGO */
+  height: 56px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: url("/public/img/logo-securocon.png") no-repeat center/contain;
+  /* PNG logo u štitu */
+  background: url("/img/logo-securocon.png") no-repeat center / contain;
 
-  box-shadow: 0 0 22px rgba(56, 189, 248, 0.35);
+  box-shadow:
+    0 0 0 1px rgba(56, 189, 248, 0.45),
+    0 0 22px rgba(56, 189, 248, 0.40);
 }
+
 
 
 .sc-logo-text {
