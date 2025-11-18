@@ -161,7 +161,7 @@ button {
 }
 
 .sc-logo-image {
-  height: 60px;          /* ⇦ OVDJE KONTROLIRAŠ VELIČINU LOGA */
+  height: 64px;          /* ⇦ OVDJE KONTROLIRAŠ VELIČINU LOGA */
   width: auto;
   display: block;
   border-radius: 14px;
@@ -169,10 +169,6 @@ button {
     0 0 0 1px rgba(56, 189, 248, 0.45),
     0 0 22px rgba(56, 189, 248, 0.40);
 }
-
-
-
-
 
 .sc-logo-text {
   display: flex;
