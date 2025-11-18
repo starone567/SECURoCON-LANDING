@@ -169,19 +169,17 @@ button {
     box-shadow: 0 0 12px rgba(0, 132, 255, 0.45);
 }
 .sc-logo-mark {
-  width: 42px;            /* povećano */
-  height: 42px;
-  border-radius: 10px;
+  width: 54px;     /* bilo 42px */
+  height: 54px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* koristimo tvoju PNG sliku */
   background: url("/public/img/logo-securocon.png") no-repeat center/contain;
 
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.30);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.35);
 }
-
 
 
 .sc-logo-text {
