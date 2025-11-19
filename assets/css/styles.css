@@ -289,38 +289,52 @@ button {
 
 /* MOBILE NAV – samo za male ekrane */
 @media (max-width: 768px) {
-  /* burger se pojavi, nav i language se skrivaju */
+  /* burger se pojavi na mobitelu */
   .sc-burger {
-    display: inline-flex;
+    display: inline-flex !important;
     margin-left: auto;
   }
 
-  .sc-nav,
+  /* nav i language su po defaultu skriveni */
+  .sc-nav {
+    display: none !important;
+  }
+
   .sc-header-controls {
-    position: fixed;
-    top: var(--nav-height);
-    left: 16px;
-    right: 16px;
-    display: none;
+    display: none !important;
+  }
+
+  /* kada je meni otvoren (body.nav-open), pokaži NAV kao panel */
+  body.nav-open .sc-nav {
+    display: flex !important;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
     padding: 0.9rem 1rem;
-    border-radius: var(--radius-lg);
     background: rgba(15, 23, 42, 0.98);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow-hard);
-    z-index: 45;
+    position: absolute;
+    top: var(--nav-height);
+    left: 16px;
+    right: 16px;
+    z-index: 200;
   }
 
-  .sc-header-controls {
-    margin-top: 0.5rem;
-    align-items: center;
-  }
-
-  /* kad je otvoren meni (body.nav-open), pokaži nav + jezik */
-  body.nav-open .sc-nav,
+  /* i ispod toga jezički switch */
   body.nav-open .sc-header-controls {
-    display: flex;
+    display: flex !important;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(15, 23, 42, 0.98);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-hard);
+    position: absolute;
+    top: calc(var(--nav-height) + 220px);
+    left: 16px;
+    right: 16px;
+    z-index: 200;
   }
 
   .sc-lang-switch {
@@ -329,11 +343,10 @@ button {
   }
 }
 
-/* kad je meni otvoren, zaključaš scroll (nije obavezno, ali dobro dođe) */
+/* kad je meni otvoren, zaključaš scroll */
 body.nav-open {
   overflow: hidden;
 }
-
 
 
 
