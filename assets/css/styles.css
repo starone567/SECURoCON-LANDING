@@ -289,18 +289,14 @@ button {
 
 /* MOBILE NAV – samo za male ekrane */
 @media (max-width: 768px) {
-  /* burger se pojavi na mobitelu */
   .sc-burger {
-    display: inline-flex;
-    margin-left: auto;
+    display: inline-flex;   /* bez margin-left: auto */
   }
 
-  /* NAV linkovi su skriveni dok je meni zatvoren */
   .sc-nav {
     display: none;
   }
 
-  /* kad je meni otvoren (body.nav-open), prikaži NAV kao panel ispod headera */
   body.nav-open .sc-nav {
     display: flex;
     flex-direction: column;
@@ -316,10 +312,12 @@ button {
     right: 16px;
     z-index: 200;
   }
+}
+
 
   /* JEZIČKI SWITCH (.sc-header-controls / .sc-lang-switch) NE DIRAMO –
      ostaje gdje je bio i stalno je vidljiv */
-}
+
 
 /* kad je meni otvoren, možeš (po želji) zaključati scroll */
 body.nav-open {
