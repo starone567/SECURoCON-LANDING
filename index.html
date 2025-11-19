@@ -178,20 +178,26 @@
 
     <!-- JEZICI + BURGER (desno) -->
     <div class="sc-header-controls">
-      <div class="sc-lang-switch">
-        <button class="sc-lang-btn" data-lang="de">DE</button>
-        <button class="sc-lang-btn" data-lang="en">EN</button>
-        <button class="sc-lang-btn is-active" data-lang="hr">HR</button>
-      </div>
+  <!-- MOBILNI GLOBUS (desktop = skriven u CSS-u) -->
+  <button class="sc-lang-toggle" aria-label="Spremeni jezik">
+    🌐
+  </button>
 
-      <!-- Burger: desktop = skriven, mobile = prikazan -->
-      <button class="sc-burger" aria-label="Navigation umschalten">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+  <!-- JEZIČKI PILL (desktop normalno, mobile = popup panel) -->
+  <div class="sc-lang-switch">
+    <button class="sc-lang-btn" data-lang="de">DE</button>
+    <button class="sc-lang-btn" data-lang="en">EN</button>
+    <button class="sc-lang-btn is-active" data-lang="hr">HR</button>
   </div>
+
+  <!-- BURGER -->
+  <button class="sc-burger" aria-label="Navigation umschalten">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+
 </header>
  
     <!-- =======================

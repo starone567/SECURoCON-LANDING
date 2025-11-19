@@ -1,6 +1,9 @@
 // assets/js/main.js
 
 // ============================
+
+
+// ============================
 // Smooth scroll for nav links
 // ============================
 
@@ -13,10 +16,15 @@
       if (!targetId) return;
       const el = document.getElementById(targetId);
       if (!el) return;
+
       el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // ako je mobilni meni otvoren, zatvori ga nakon klika
+      document.body.classList.remove("nav-open");
     });
   });
 })();
+
 
 // ============================
 // Multilingual content
@@ -639,3 +647,38 @@ function renderFaq(lang) {
   applyTranslations(initialLang);
   setActiveLangButton(initialLang);
 })();
+// ============================
+// Burger meni & language globe
+// ============================
+
+// BURGER – otvara/zatvara mobilni meni
+const burger = document.querySelector(".sc-burger");
+if (burger) {
+  burger.addEventListener("click", () => {
+    const isOpen = document.body.classList.toggle("nav-open");
+    if (isOpen) {
+      // ako smo otvorili meni, zatvori jezički panel
+      document.body.classList.remove("lang-open");
+    }
+  });
+}
+
+// GLOBUS – otvara/zatvara jezički panel na mobitelu
+const langToggleBtn = document.querySelector(".sc-lang-toggle");
+if (langToggleBtn) {
+  langToggleBtn.addEventListener("click", () => {
+    const isOpen = document.body.classList.toggle("lang-open");
+    if (isOpen) {
+      // ako smo otvorili jezički panel, zatvori meni
+      document.body.classList.remove("nav-open");
+    }
+  });
+}
+
+// nakon odabira jezika zatvori jezički panel
+const langPanelButtons = document.querySelectorAll(".sc-lang-switch .sc-lang-btn");
+langPanelButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.body.classList.remove("lang-open");
+  });
+});

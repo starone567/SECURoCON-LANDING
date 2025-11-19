@@ -238,6 +238,21 @@ button {
   align-items: center;
   gap: 0.85rem;
 }
+/* Globe dugme za jezik – desktop: skriven, mobile: pokažemo */
+.sc-lang-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+  font-size: 16px;
+  color: #e5e7eb;
+  padding: 0;
+}
+
 
 /* Language switcher */
 
@@ -825,28 +840,6 @@ button {
    RESPONSIVE
    ======================================= */
 
-/* osnovni stil burgera – desktop = sakriven */
-.sc-burger {
-  display: none;              /* desktop i veće širine: sakriven */
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  margin-left: 0.75rem;
-  padding: 0.35rem 0.45rem;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  background: rgba(15, 23, 42, 0.9);
-  cursor: pointer;
-}
-
-.sc-burger span {
-  display: block;
-  width: 18px;
-  height: 2px;
-  border-radius: 999px;
-  background: #e5e7eb;
-}
-
 @media (max-width: 900px) {
   .sc-hero-inner {
     grid-template-columns: minmax(0, 1fr);
@@ -872,22 +865,25 @@ button {
 }
 
 @media (max-width: 768px) {
-  /* mobilni header */
+  /* Header layout na mobitelu */
   .sc-header-inner {
     gap: 0.7rem;
   }
 
-  /* burger se pojavljuje na mobitelu */
+  /* pokaži globus + burger, sakrij nav dok je zatvoren */
+  .sc-lang-toggle {
+    display: inline-flex;
+  }
+
   .sc-burger {
     display: inline-flex;
   }
 
-  /* nav je skriven dok je meni zatvoren */
   .sc-nav {
     display: none;
   }
 
-  /* otvoreni mob. meni */
+  /* NAV panel kad je otvoren (burger) */
   body.nav-open .sc-nav {
     display: flex;
     flex-direction: column;
@@ -904,7 +900,28 @@ button {
     z-index: 200;
   }
 
-  body.nav-open {
+  /* Jezički pill postaje mali panel ispod headera */
+  .sc-lang-switch {
+    position: absolute;
+    top: calc(var(--nav-height) + 6px);
+    right: 16px;
+    left: auto;
+    padding: 0.4rem;
+    background: rgba(15, 23, 42, 0.98);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-hard);
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    display: none; /* default: skriven */
+  }
+
+  /* kad je globus kliknut – prikaži jezički panel */
+  body.lang-open .sc-lang-switch {
+    display: inline-flex;
+  }
+
+  /* spriječi skrolanje dok je meni otvoren (opcionalno) */
+  body.nav-open,
+  body.lang-open {
     overflow: hidden;
   }
 }
