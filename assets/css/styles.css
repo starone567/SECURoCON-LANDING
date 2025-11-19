@@ -286,7 +286,8 @@ button {
 /* Hamburger button */
 
 .sc-burger {
-  display: none;              /* default = desktop (skriven) */
+  display: none;                /* sakriven na desktopu */
+  flex-direction: column;       /* <<< OVO JE KLJUČNO */
   align-items: center;
   justify-content: center;
   gap: 4px;
@@ -297,6 +298,7 @@ button {
   background: rgba(15, 23, 42, 0.9);
   cursor: pointer;
 }
+
 
 .sc-burger span {
   display: block;
