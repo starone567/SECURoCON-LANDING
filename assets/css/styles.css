@@ -807,6 +807,16 @@ button {
   align-items: center;
   gap: 0.75rem;
 }
+/* Mali SECURoCON logo u footeru */
+.sc-footer-logo {
+  height: 38px;          /* po potrebi 32px ako želiš još manje */
+  width: auto;
+  border-radius: 10px;
+  display: block;
+  box-shadow:
+    0 0 0 1px rgba(56, 189, 248, 0.45),
+    0 0 16px rgba(56, 189, 248, 0.35);
+}
 
 .sc-footer-title {
   font-size: 0.98rem;
