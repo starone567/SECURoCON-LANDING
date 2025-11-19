@@ -825,6 +825,28 @@ button {
    RESPONSIVE
    ======================================= */
 
+/* osnovni stil burgera – desktop = sakriven */
+.sc-burger {
+  display: none;              /* desktop i veće širine: sakriven */
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-left: 0.75rem;
+  padding: 0.35rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.9);
+  cursor: pointer;
+}
+
+.sc-burger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
 @media (max-width: 900px) {
   .sc-hero-inner {
     grid-template-columns: minmax(0, 1fr);
@@ -855,8 +877,9 @@ button {
     gap: 0.7rem;
   }
 
+  /* burger se pojavljuje na mobitelu */
   .sc-burger {
-    display: inline-flex;     /* na mobitelu vidljiv */
+    display: inline-flex;
   }
 
   /* nav je skriven dok je meni zatvoren */
@@ -903,25 +926,4 @@ button {
   .sc-pricing-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-}
-/* DEBUG: prisili burger da bude vidljiv svugdje */
-.sc-burger {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  margin-left: 0.75rem;
-  padding: 0.35rem 0.45rem;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  background: rgba(15, 23, 42, 0.9);
-  cursor: pointer;
-}
-
-.sc-burger span {
-  display: block;
-  width: 18px;
-  height: 2px;
-  border-radius: 999px;
-  background: #e5e7eb;
 }
