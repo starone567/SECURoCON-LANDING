@@ -73,7 +73,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;   /* spriječi pomicanje lijevo-desno */
 }
+
 
 body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
@@ -262,6 +265,75 @@ button {
   color: #020617;
   font-weight: 600;
 }
+/* Burger ikona – desktop sakrivena */
+.sc-burger {
+  display: none;
+  background: none;
+  border: 0;
+  padding: 0.35rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.sc-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background: #e5e7eb;
+}
+
+.sc-burger span + span {
+  margin-top: 4px;
+}
+
+/* MOBILE NAV – samo za male ekrane */
+@media (max-width: 768px) {
+  /* burger se pojavi, nav i language se skrivaju */
+  .sc-burger {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .sc-nav,
+  .sc-header-controls {
+    position: fixed;
+    top: var(--nav-height);
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius-lg);
+    background: rgba(15, 23, 42, 0.98);
+    box-shadow: var(--shadow-hard);
+    z-index: 45;
+  }
+
+  .sc-header-controls {
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+
+  /* kad je otvoren meni (body.nav-open), pokaži nav + jezik */
+  body.nav-open .sc-nav,
+  body.nav-open .sc-header-controls {
+    display: flex;
+  }
+
+  .sc-lang-switch {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* kad je meni otvoren, zaključaš scroll (nije obavezno, ali dobro dođe) */
+body.nav-open {
+  overflow: hidden;
+}
+
 
 
 

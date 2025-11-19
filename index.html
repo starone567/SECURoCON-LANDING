@@ -140,51 +140,58 @@
     <!-- =======================
          NAVBAR
     ======================== -->
-    <header class="sc-header">
-      <div class="sc-container sc-header-inner">
-        <div class="sc-logo-wrap">
-          <img
-            src="/public/img/logo-securocon.png"
-            alt="SECURoCON Logo"
-            class="sc-logo-image"
-          />
-          <div class="sc-logo-text">
-            <span class="sc-logo-title">SECURoCON</span>
-            <span class="sc-logo-subtitle" data-i18n="brand.subtitle">
-              Remote Home Digital Protection
-            </span>
+      <header class="sc-header">
+        <div class="sc-container sc-header-inner">
+          <div class="sc-logo-wrap">
+            <img
+              src="/public/img/logo-securocon.png"
+              alt="SECURoCON Logo"
+              class="sc-logo-image"
+            />
+            <div class="sc-logo-text">
+              <span class="sc-logo-title">SECURoCON</span>
+              <span class="sc-logo-subtitle" data-i18n="brand.subtitle">
+                Remote Home Digital Protection
+              </span>
+            </div>
+          </div>
+
+          <!-- 🔹 NOVO: burger dugme između loga i ostatka -->
+          <button class="sc-burger" aria-label="Menü öffnen/ schließen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <!-- OVO JE TVOJE, SAMO OSTAVLJENO KAKO JE BILO -->
+          <nav class="sc-nav">
+            <button class="sc-nav-link" data-scroll-target="hero" data-i18n="nav.home">
+              Home
+            </button>
+            <button class="sc-nav-link" data-scroll-target="services" data-i18n="nav.services">
+              Services
+            </button>
+            <button class="sc-nav-link" data-scroll-target="packages" data-i18n="nav.packages">
+              Packages
+            </button>
+            <button class="sc-nav-link" data-scroll-target="faq" data-i18n="nav.faq">
+              FAQ
+            </button>
+            <button class="sc-nav-link" data-scroll-target="contact" data-i18n="nav.contact">
+              Contact
+            </button>
+          </nav>
+
+          <div class="sc-header-controls">
+            <div class="sc-lang-switch">
+              <button class="sc-lang-btn" data-lang="de">DE</button>
+              <button class="sc-lang-btn" data-lang="en">EN</button>
+              <button class="sc-lang-btn is-active" data-lang="hr">HR</button>
+            </div>
           </div>
         </div>
+      </header>
 
-
-
-        <nav class="sc-nav">
-          <button class="sc-nav-link" data-scroll-target="hero" data-i18n="nav.home">
-            Home
-          </button>
-          <button class="sc-nav-link" data-scroll-target="services" data-i18n="nav.services">
-            Services
-          </button>
-          <button class="sc-nav-link" data-scroll-target="packages" data-i18n="nav.packages">
-            Packages
-          </button>
-          <button class="sc-nav-link" data-scroll-target="faq" data-i18n="nav.faq">
-            FAQ
-          </button>
-          <button class="sc-nav-link" data-scroll-target="contact" data-i18n="nav.contact">
-            Contact
-          </button>
-        </nav>
-
-        <div class="sc-header-controls">
-          <div class="sc-lang-switch">
-            <button class="sc-lang-btn" data-lang="de">DE</button>
-            <button class="sc-lang-btn" data-lang="en">EN</button>
-            <button class="sc-lang-btn is-active" data-lang="hr">HR</button>
-          </div>
-        </div>
-      </div>
-    </header>
 
     <!-- =======================
          MAIN
@@ -621,5 +628,15 @@
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
+  <script>
+  const burger = document.querySelector('.sc-burger');
+
+  if (burger) {
+    burger.addEventListener('click', () => {
+      document.body.classList.toggle('nav-open');
+    });
+  }
+</script>
+
 </body>
 </html>
